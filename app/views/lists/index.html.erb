@@ -1,0 +1,10 @@
+<h1>index</h1>
+
+<!-- app/views/lists/index.html.erb -->
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a New list", new_list_path %>
