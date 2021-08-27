@@ -7,6 +7,14 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to lists_path(@list)
+  end
+
   def show
     @list = List.find(params[:id])
     @bookmarks = Bookmark.all
@@ -15,7 +23,7 @@ class ListsController < ApplicationController
       if bookmark.list_id == params[:id].to_i
         @list_bookmarks << bookmark
       end
-    end 
+    end
   end
 
   # View not needed for create

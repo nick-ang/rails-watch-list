@@ -4,18 +4,17 @@
   margin-right: 5px;
   margin-left: 5px;
   margin-top: 10px;
-  align-items: center;
+  flex: 0 1 32%;
+  border-radius: 20px;
 }
 
 .card-trip > img {
   padding: 20px;
-  text-align: center;
 }
 
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
 }
 
 .card-trip p {
@@ -26,23 +25,11 @@
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: left;
-  position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
 
 .list-group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 2vh;
-  padding-left: 2vh;
-  padding-right: 2vh;
 }
