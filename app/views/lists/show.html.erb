@@ -14,13 +14,17 @@
    <%= image_tag("https://image.tmdb.org/t/p/original/#{bookmark.movie.poster_url}", height: 400) %>
   <div class="card-trip-infos">
     <div>
-    <h2 class="list-group-item"><%= "#{bookmark.movie.title}" %></h2>
-      <p class="list-group-item"><%= "#{bookmark.movie.overview}" %></p>
-      <p class="list-group-item"><%= "Rating - #{bookmark.movie.rating}" %></p>
+    <h2 class="list-group-item" style="
+    background-color: black;"><%= "#{bookmark.movie.title}" %></h2>
+      <p class="list-group-item" style="
+    background-color: black;"><%= "#{bookmark.movie.overview}" %></p>
+      <p class="list-group-item" style="
+    background-color: black;"><%= "Rating - #{bookmark.movie.rating}" %></p>
 
 
     </div>
-    <h2 class="list-group-item"><%= "#{bookmark.comment}" %></h2>
+    <h2 class="list-group-item" style="
+    background-color: black;"><%= "#{bookmark.comment}" %></h2>
   <%= link_to "Remove from this list",
               bookmark_path(bookmark),
               method: :delete,
