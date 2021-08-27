@@ -1,12 +1,11 @@
-<div class="show-banner">
-  <h1>Welcome to your very own Movie Watch List</h1>
+<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 2000, crop: :fill %>')">
 </div>
 
 
   <div class="row justify-content-center">
   </div>
 </div>
-
+<br>
 <h1><%= @list.name %></h1>
 
 <div class="list-container">

@@ -10,23 +10,22 @@
   </div>
 </div>
 <div class = top-container>
+
 <h2>My Lists</h2>
-<button name="button" type="submit" class="btn btn-flat">
-      <%= link_to "Add a New list", new_list_path %>
-    </button>
-
-</div>
-<div class = list-container>
-  <% @lists.each do |list| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  <p><%= link_to list.name, list_path(list) %></p>
-    </div>
-  <% end %>
-</div>
-
-
-
 
 <button name="button" type="submit" class="btn btn-flat">
       <%= link_to "Add a movie to your database", search_path %>
     </button>
+<button name="button" type="submit" class="btn btn-flat">
+      <%= link_to "Add a New list", new_list_path %>
+    </button>
+
+
+</div>
+<div class = list-container>
+  <% @lists.each do |list| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 2000, crop: :fill %>')">
+  <p><%= link_to list.name, list_path(list) %></p>
+    </div>
+  <% end %>
+</div>
