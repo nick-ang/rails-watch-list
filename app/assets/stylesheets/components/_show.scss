@@ -1,5 +1,5 @@
 .card-trip {
-  background: white;
+  background: rgb(0, 0, 0);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-right: 5px;
   margin-left: 5px;
@@ -25,6 +25,7 @@
 
 .card-trip .card-trip-infos {
   padding: 16px;
+ background-color: black;
 }
 
 
