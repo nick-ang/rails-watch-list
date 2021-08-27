@@ -3,13 +3,26 @@
   <%= f.submit %>
 <% end %>
 
-
+<br>
 <h1>Select Movie from List</h1>
+<div class="list-container" >
 <%= $results.each_with_index do |result, i| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-trip">
 
-  <%= "Index: #{i} - #{result["title"]}" %>
-
-  <%= link_to "Add Movie", new_movie_path(@results) %>
+  <br>
+  <%= image_tag("https://image.tmdb.org/t/p/original/#{result["poster_path"]}", height: 200) %>
+  <div class="card-trip-info">
+  <%= "index - #{i}" %>
+  <br>
+  <br>
+  <%= "Title - #{result["title"]}" %>
+  <br>
+  <br>
+  <%= "Rating - #{result["vote_average"]}" %>
+  <br>
+  <br>
+  <br>
+  </div>
     </div>
   <% end %>
+</div>

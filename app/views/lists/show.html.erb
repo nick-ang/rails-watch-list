@@ -37,7 +37,11 @@
 
 
 <%= link_to "Back to Home", lists_path %>
+<br>
+<%= link_to "Add a movie to your database", search_path %>
+<br>
 <%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
+<br>
   <%= link_to "Delete this list ",
               list_path(@list),
               method: :delete,
