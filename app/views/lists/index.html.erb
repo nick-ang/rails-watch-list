@@ -1,10 +1,32 @@
-<h1>index</h1>
 
-<!-- app/views/lists/index.html.erb -->
-<ul>
+<div class="home-banner">
+  <h1 id="dynamic-text">
+  <span id="banner-typed-text"></span>
+</h1>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+  </div>
+</div>
+<div class = top-container>
+<h2>My Lists</h2>
+<button name="button" type="submit" class="btn btn-flat">
+      <%= link_to "Add a New list", new_list_path %>
+    </button>
+
+</div>
+<div class = list-container>
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <p><%= link_to list.name, list_path(list) %></p>
+    </div>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "Add a New list", new_list_path %>
+
+
+
+<button name="button" type="submit" class="btn btn-flat">
+      <%= link_to "Add a movie to your database", search_path %>
+    </button>

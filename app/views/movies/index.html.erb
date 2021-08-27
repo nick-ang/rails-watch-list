@@ -1,0 +1,7 @@
+<h1>Select Movie from List</h1>
+<%= @results.each do |result| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <p><%= "#{result["id"]} - #{result["title"]}" %></p>
+  <%= link_to "Add Movie", new_movie_path(@results) %>
+    </div>
+  <% end %>

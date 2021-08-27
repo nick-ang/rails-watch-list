@@ -1,12 +1,52 @@
+<div class="show-banner">
+  <h1>Welcome to your very own Movie Watch List</h1>
+</div>
+
+
+  <div class="row justify-content-center">
+  </div>
+</div>
 
 <h1><%= @list.name %></h1>
 
-<ul class="list-group">
+<div class="list-group">
   <% @list_bookmarks.each do |bookmark| %>
-    <li class="list-group-item"><%= "#{bookmark.movie.title}" %></li>
-  <% end %>
-</ul>
+  <div class="card-trip">
+   <%= image_tag("https://image.tmdb.org/t/p/original/#{bookmark.movie.poster_url}", height: 200) %>
+  <div class="card-trip-infos">
+    <div>
+    <h2 class="list-group-item"><%= "#{bookmark.movie.title}" %></h2>
+      <p class="list-group-item"><%= "#{bookmark.movie.overview}" %></p>
 
+
+    </div>
+    <h2 class="list-group-item"><%= "#{bookmark.comment}" %></h2>
+  <%= link_to "Delete",
+              bookmark_path(bookmark),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+  </div>
+
+</div>
+  <% end %>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mt-5">
+      <div class="mx-auto mt-5" style="width: 400px">
+        <%= form_with(url: new_movie_path, method: "get", local: true) do %>
+          <div class="form-group">
+            <%= label_tag :title, "Search for a movie " %>
+            <%= text_field_tag :title, nil, placeholder: "Eg. Germany", class: "form-control" %>
+          </div>
+          <%= button_tag "Search", class: "btn btn-success btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to "Back to Home", lists_path %>
 <%= link_to "Add a movie", new_list_bookmark_path(@list) %>

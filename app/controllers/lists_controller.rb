@@ -11,11 +11,11 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @bookmarks = Bookmark.all
     @list_bookmarks = []
-    (1..@bookmarks.length).each do |i|
-      if @bookmarks.find(i).list_id == params[:id].to_i
-        @list_bookmarks << @bookmarks.find(i)
+    @bookmarks.each do |bookmark|
+      if bookmark.list_id == params[:id].to_i
+        @list_bookmarks << bookmark
       end
-    end
+    end 
   end
 
   # View not needed for create

@@ -21,6 +21,7 @@ gem "webpacker", "~> 4.0"
 gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.7"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -50,3 +51,4 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "rspec-rails", group: [:test]
 gem "rails-controller-testing", group: [:test]
+gem "dotenv-rails", groups: [:development, :test]

@@ -1,0 +1,15 @@
+<%= simple_form_for(@movie) do |f| %>
+  <%= f.input :overview %>
+  <%= f.submit %>
+<% end %>
+
+
+<h1>Select Movie from List</h1>
+<%= $results.each_with_index do |result, i| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+
+  <%= "Index: #{i} - #{result["title"]}" %>
+
+  <%= link_to "Add Movie", new_movie_path(@results) %>
+    </div>
+  <% end %>
